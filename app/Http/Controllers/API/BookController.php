@@ -15,8 +15,9 @@ public function index()
 {
     # code...
     $books = Book::all();
-    return $this->sendResponse($books->toArray(), 'Books read succesfully');
+    return response()->json(  $books );
 }
+
 
 
 public function store(Request $request)
